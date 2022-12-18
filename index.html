@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custo de veiculo 0 KM</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Valor do veiculo</h1>
+
+        Valor do veiculo: <input type="number" id="valorBruto"> <br>
+        Frete: <span id="frete"> </span> <br>
+        ICMS: <span id="icms"> </span>
+
+
+        <br><br>
+
+        Mês de compra:
+        <select id="mesCompra">
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select>
+
+        Região:
+        <select id="regiao">
+            <option value="norte">Norte</option>
+            <option value="nordeste">Nordeste</option>
+            <option value="sul">Sul</option>
+            <option value="sudeste">Sudeste</option>
+        </select>
+
+        Valor total:<span id="valorTotal"> </span>
+
+        <br><br>
+
+        <fieldset>
+            <legend>
+                Documentos
+            </legend>
+
+            Sim <input type="radio" name="btnsDocumentos" id="sim">
+            Não <input type="radio" name="btnsDocumentos" id="nao">
+
+            <br></br>
+
+            IPVA: <span id="ipva"></span><br>
+            Licenciamento: <span id="licenciamento"></span><br>
+            Seguro obrigatório: <span id="seguro"></span><br><br>
+            Total: <span id="totalDocumentos"></span>
+        </fieldset>
+
+        <fieldset id="financiamento">
+            <legend>
+                Financiamentos
+            </legend>
+
+            Banco:
+            <select id="banco">
+                <option value="itau">Itaú</option>
+                <option value="bradesco">Bradesco</option>
+                <option value="santader">Santander</option>
+            </select> <br><br>
+
+            Entrada: <input type="number" id="entrada">
+            Valor financiado: <span id="valorFinanciado"> <br> <br>
+            Prazo: <input type="number" id="prazo">
+            Valor Parcelas: <span id="valorParcelas"> <br><br>
+            Total: <span id="totalFinanciamento"></span>
+
+        </fieldset>
+
+        <button onclick="calcular()">Calcular Total</button>
+        <button onclick="calcularParcelamento()"> Calcular financiamento</button>
+    </div>
+</body>
+
+</html>
